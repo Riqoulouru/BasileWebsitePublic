@@ -1,0 +1,94 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.rectangle {
+  width: 70%;
+  height: auto;
+  background-color: var(--secondaryColor);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.gridItem {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: inset 20px 30px 20px -10px #eaaa77; //trick pour ne pas avoir les pixels blancs du au border-radius qui arrondi les coins
+  width: 100%;
+  padding-bottom: 100%;
+  background-color: var(--primaryColor);
+  transition: transform 0.3s ease;
+}
+
+.gridItem:hover {
+  transform: scale(1.05);
+}
+
+.mosaicContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  color: var(--linkColor);
+  background-color: var(--thirdColor);
+  border-color: var(--thirdColor);
+  border-width: 0;
+}
+
+
+.mosaicContent h3 {
+  margin-top: 10px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--thirdColor);
+  padding: 15px;
+  z-index: 999;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.navbar li a {
+  color: var(--linkColor);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar li a:hover {
+  background-color: var(--linkHoverColorMain);
+  color: var(--textHoverColor);
+}

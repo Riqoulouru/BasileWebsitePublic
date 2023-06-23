@@ -1,0 +1,103 @@
+#body {
+    height: 0;
+}
+
+.root {
+    display: flex;
+    margin: auto;
+    min-height: 100vh;
+    max-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: Roboto, serif;
+}
+
+.position {
+    display: block;
+}
+
+.root .position .imgBasile {
+    display: flex;
+    margin: auto;
+    width: 30vh;
+    border-radius: 53% 47% 33% 67% / 61% 66% 34% 39%;
+    animation: corner 3s linear infinite;
+
+}
+
+.textBlock a {
+    font-family: Roboto, serif;
+    font-weight: 700;
+    color: var(--linkColor);
+    font-size: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 var(--linkHoverColor);
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.textBlock a:hover {
+    box-shadow: inset 30vw 0 0 0 var(--linkHoverColor);
+    color: var(--textColor);
+}
+
+.whiteColor {
+    color: var(--titleColor);
+    font-weight: 700;
+}
+
+
+.textBlock {
+    color: var(--textColor);
+    line-height: 50%;
+    font-size: 1em;
+    text-align: center;
+}
+
+.roundedButton {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border-radius: 20px;
+    padding: 8px 16px;
+    background-color: transparent;
+    border: 2px solid #794a2a;
+    color: var(--linkColor);
+    cursor: pointer; /* Ajoute la propriété cursor */
+    text-decoration: none;
+}
+
+@keyframes corner {
+    0%, to {
+        border-radius: 53% 47% 33% 67% / 61% 66% 34% 39%;
+    }
+    25% {
+        border-radius: 41% 59% 40% 60% / 46% 66% 34% 54%;
+    }
+    50% {
+        border-radius: 34% 67% 27% 40% / 40% 66% 34% 54%;
+    }
+    75% {
+        border-radius: 61% 39% 67% 33% / 46% 66% 34% 54%;
+    }
+}
+
+@media only screen and (min-aspect-ratio: 16/9) {
+    .root .textBlock p {
+        font-size: 2vw;
+    }
+
+    .root .textBlock h1 {
+        font-size: 3vw;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .textBlock a:hover {
+        box-shadow: inset 30vh 0 0 0 #9a9a9a;
+        color: #616161;
+    }
+
+}
+

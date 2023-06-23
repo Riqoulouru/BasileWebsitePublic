@@ -1,0 +1,84 @@
+.root {
+    display: block;
+    margin: auto;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: Roboto, serif;
+}
+
+.root h1 {
+    display: flex;
+    color: var(--titleColor);
+}
+
+.root p {
+    display: flex;
+    color: var(--textColor);
+}
+
+.centerText {
+    max-width: 60vw;
+    margin: auto;
+    line-height: 1.7em;
+    font-size: 1em;
+}
+
+.centerText a {
+    font-family: Roboto, serif;
+    color: var(--linkColor);
+    font-weight: 700;
+    font-size: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 var(--linkHoverColor);
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    height: 100%;
+
+}
+
+.centerText p {
+    display: inline;
+}
+
+.centerText a:hover {
+    box-shadow: inset 30vw 0 0 0 var(--linkHoverColor);
+    color: var(--linkColor);
+}
+
+.spacing {
+    padding-top: 15vh;
+}
+
+.roundedButton {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border-radius: 20px;
+    padding: 8px 16px;
+    background-color: transparent;
+    border: 2px solid #794a2a;
+    color: var(--linkColor);
+    cursor: pointer; /* Ajoute la propriété cursor */
+    text-decoration: none;
+
+
+}
+
+
+
+@media only screen and (min-aspect-ratio: 16/9) {
+    .centerText {
+        font-size: 2vw;
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+    .textBlock a:hover {
+        box-shadow: inset 30vh 0 0 0 var(--linkHoverColor);
+        color: var(--linkColor);
+    }
+
+}

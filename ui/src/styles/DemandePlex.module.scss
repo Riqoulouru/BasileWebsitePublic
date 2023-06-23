@@ -1,0 +1,187 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--thirdColor);
+  padding: 8px;
+  z-index: 999;
+}
+
+.navbarList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbarList li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.navbarList li a {
+  color: var(--linkColor);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  font-family: var(--fontFamily);
+}
+
+.navbarList li a:hover {
+  background-color: var(--linkHoverColorMain);
+  color: var(--textHoverColor);
+}
+
+.container {
+  margin-top: 80px;
+  padding: 20px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table th,
+.table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.table th {
+  cursor: pointer;
+  background-color: #f2f2f2;
+}
+
+.table th:hover {
+  background-color: #e0e0e0;
+}
+
+.table button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+.table button:hover {
+  background-color: #e0e0e0;
+}
+
+.evenRow {
+  background-color: rgba(249, 249, 249, 0.16);
+}
+
+.oddRow {
+  background-color: #ffffff;
+}
+
+.modalBox {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialogContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.roundedInput {
+  border-radius: 4px;
+}
+
+.dialogButton {
+  margin-top: 10px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dialogButton:hover {
+  background-color: #0056b3;
+}
+
+.navbarButton {
+  color: var(--linkColor);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: var(--fontFamily);
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.navbarButton:hover {
+  background-color: var(--linkHoverColorMain);
+  color: var(--textHoverColor);
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input {
+  width: 300px;
+  height: 30px;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.registerButton {
+  width: 200px;
+  height: 40px;
+  background-color: #eaaa77;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

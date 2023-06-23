@@ -1,0 +1,121 @@
+.root {
+    display: block;
+    margin: auto;
+    min-height: 140vh;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: Roboto, serif;
+}
+
+.divGrid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    padding: 20px;
+    width: 60vw;
+    align-content: center;
+}
+
+.gridContainer a {
+    text-align: center;
+}
+
+.root h1 {
+    display: flex;
+    color: var(--titleColor);
+}
+
+.root p {
+    display: flex;
+    color: var(--textColor);
+}
+
+.spacing {
+    padding-top: 15vh;
+}
+
+
+.centerText {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    text-align: left;
+    max-width: 70vw;
+    margin: auto;
+}
+
+.centerText a {
+    font-family: Roboto, serif;
+    font-weight: 700;
+    color: var(--linkColor);
+    font-size: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 var(--linkHoverColor);
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.centerText a:hover {
+    box-shadow: inset 30vw 0 0 0 var(--linkHoverColor);
+    color: var(--linkColor);
+}
+
+.cardDisplay {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-left: 15vw;
+    margin-right: 15vw;
+
+}
+
+.cardDisplay a {
+    text-decoration: none;
+}
+
+.roundedButton {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border-radius: 20px;
+    margin-left: 10px;
+    padding: 8px 16px;
+    background-color: transparent;
+    border: 2px solid #794a2a;
+    color: #794a2a;
+    cursor: pointer; /* Ajoute la propriété cursor */
+    text-decoration: none;
+}
+
+@media only screen and (min-aspect-ratio: 16/9) {
+    .root .centerText p {
+        font-size: 2vw;
+    }
+
+    .root .centerText h1 {
+        font-size: 3vw;
+    }
+}
+
+
+@media (max-width: 1100px) {
+    .gridContainer {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+        padding: 20px;
+        width: 60vw;
+        align-content: center;
+    }
+
+    .gridContainer a {
+        text-align: center;
+    }
+}

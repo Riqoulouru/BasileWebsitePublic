@@ -1,0 +1,178 @@
+$mainColor: #f6f2f2;
+$accentColor: orange;
+$thirdColor: #333333;
+$linkColor: #ffffff;
+$linkHoverColorMain: #4a4a4a;
+$textHoverColor: #ffffff;
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.regles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.gameContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.numericPad {
+  width: 350px;
+  border-radius: 10px;
+  background-color: $mainColor;
+  padding-top: 4%;
+  margin-bottom: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(73, 65, 65, 0.16);
+  margin: 0 5px;
+  border-radius: 10%;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    opacity: 80%;
+  }
+
+  &:active {
+    background-color: rgba(73, 65, 65, 0.5);
+  }
+
+  &.lit {
+    background-color: $accentColor;
+  }
+}
+
+.navbar {
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--thirdColor);
+  padding: 15px;
+  z-index: 999;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.navbar li a {
+  color: var(--linkColor);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar li a:hover {
+  background-color: var(--linkHoverColorMain);
+  color: var(--textHoverColor);
+}
+
+
+.leaderboardContainer {
+  position: fixed;
+  right: 5%;
+  width: 15%;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  padding: 10px; // Ajoute un padding pour l'apparence
+  max-height: 60%;
+  overflow: auto;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 10px; // Ajoute un espace entre le titre et le tableau
+  }
+
+  table {
+
+    width: 100%;
+    background-color: #f6f2f2; // Couleur de fond de la table
+    border-collapse: collapse; // Fusionne les bordures des cellules
+
+    th,
+    td {
+      padding: 8px;
+      border-bottom: 1px solid #ddd; // Bordure inférieure des cellules
+    }
+
+    th {
+      background-color: #8d919b; // Couleur de fond des en-têtes
+      color: #fff; // Couleur du texte des en-têtes
+    }
+
+    td {
+      text-align: center;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2; // Couleur de fond des lignes paires
+    }
+
+    tr:hover {
+      background-color: #ddd; // Couleur de fond au survol des lignes
+    }
+  }
+}
+
+.leaderboardScroll {
+  max-height: 70%;
+  overflow: auto;
+}
+
+
+// Masque les flèches lors du tri des colonnes
+.leaderboardContainer th span {
+  display: none;
+}
+
+// Media queries pour les appareils mobiles
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .gameContainer {
+    margin-right: 0;
+    margin-top: 10px;
+  }
+
+  .leaderboardContainer {
+    position: static;
+    margin-top: 20px;
+    width: 90%;
+  }
+}

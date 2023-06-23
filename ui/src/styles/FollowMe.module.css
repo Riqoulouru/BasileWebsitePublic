@@ -1,0 +1,131 @@
+.ul {
+    list-style-type: none;
+
+}
+
+.followMe a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 75px;
+    height: 50px;
+    padding-left: 20px;
+    margin-left: -20px;
+    transition: transform 425ms cubic-bezier(.05, .65, .18, 1);
+}
+
+.followMe .github {
+    background-color: #4e545a;
+}
+
+.followMe .github span {
+    background: url('../images/icons8-github.svg') no-repeat 0 1px;
+    display: block;
+    width: 35px;
+    height: 35px;
+    background-size: 100% auto;
+    text-indent: -9999em;
+}
+
+.followMe .linkedin {
+    background-color: #0288d1;
+}
+
+.followMe .linkedin span {
+    background: url('../images/icons8-linkedin-entouré (1).svg') no-repeat 0 1px;
+    display: block;
+    width: 35px;
+    height: 35px;
+    background-size: 100% auto;
+    text-indent: -9999em;
+}
+
+.followMe .gitlab {
+    background-color: #fc6d26;
+}
+
+.followMe .gitlab span {
+    background: url('../images/gitlab-logo-700.svg') no-repeat 0 1px;
+    display: block;
+    width: 35px;
+    height: 35px;
+    background-size: 100% auto;
+    text-indent: -9999em;
+}
+
+
+
+
+
+@media (min-width: 768px) {
+    /* Définir une animation */
+    @keyframes moveRight {
+        from {
+            transform: translateX(0px);
+        }
+        to {
+            transform: translateX(15px);
+        }
+    }
+
+    @keyframes moveLeft {
+        from {
+            transform: translateX(15px);
+        }
+        to {
+            transform: translateX(0px);
+        }
+    }
+
+    @keyframes slideInFromLeft {
+        0% {
+            transform: translateX(-100px);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    .followMePlacement {
+        position: fixed;
+        left: -40px;
+        top: calc(50% - (165px / 2));
+        width: 55px;
+        height: 165px;
+        animation: slideInFromLeft 0.3s ease-in-out;
+    }
+
+    .followMePlacement a:hover {
+        animation: moveRight 0.3s ease-in-out;
+        animation-fill-mode: forwards;
+    }
+
+    .followMePlacement a:not(:hover) {
+        animation: moveLeft 0.3s ease-in-out;
+        animation-fill-mode: forwards;
+    }
+}
+
+/* Styles pour les écrans de téléphone */
+
+@media (max-width: 767px) {
+    .followMePlacement {
+        display: flex;
+        position: fixed;
+        bottom: 40px;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        justify-content: space-between;
+    }
+
+    .followMe a {
+        display: flex;
+        width: 50px;
+        height: 50px;
+        margin: 0;
+        padding: 0;
+    }
+
+}

@@ -1,0 +1,79 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.box {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input {
+  width: 300px;
+  height: 30px;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.registerButton {
+  width: 100%; /* Utilisez une largeur de 100% pour que le bouton occupe toute la largeur du conteneur */
+  max-width: 200px; /* Définissez une largeur maximale pour limiter la largeur du bouton sur les grands écrans */
+  height: 40px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.redirectText {
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.redirectLink {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.roundedButton {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  border-radius: 20px;
+  margin-left: 10px;
+  padding: 8px 16px;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}

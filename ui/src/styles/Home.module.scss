@@ -1,0 +1,141 @@
+.container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    /* Ajoute une valeur de z-index au conteneur principal */
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('../images/japan_background.png');
+        background-size: cover;
+        filter: brightness(0.7);
+        /* Filtre appliqué uniquement à l'image */
+        z-index: -1;
+        /* Assure que l'image de fond est en arrière-plan */
+    }
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    left: 20px;
+}
+
+.navLinks {
+    list-style: none;
+    display: flex;
+}
+
+.navLinks li {
+    margin-right: 10px;
+    padding: 12px 16px;
+}
+
+.navLinks a {
+    border-radius: 20px;
+    padding: 8px 16px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    text-decoration: none;
+}
+
+.buttonsContainer {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    margin: 16px;
+}
+
+
+
+.roundedButton {
+    border-radius: 20px;
+    padding: 8px 16px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    text-decoration: none;
+
+}
+
+.roundedButton:last-child {
+    color: #22a7f0;
+    border-color: #22a7f0;
+    cursor: pointer;
+    margin-left: 10px;
+    /* Ajoute la propriété cursor */
+}
+
+.contentContainer {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+    position: relative;
+    /* Permet d'empiler le contenu sur l'image de fond */
+    z-index: 2;
+    /* Assure que le contenu est au-dessus de l'image de fond */
+}
+
+.welcomeMessage {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.exploreMessage {
+    font-size: 18px;
+}
+
+.menuButton {
+    display: none;
+    /* Masquer le bouton du menu par défaut sur les écrans larges */
+}
+
+.navLinks {
+    list-style: none;
+    display: flex;
+    /* Ajoutez d'autres styles de votre choix */
+}
+
+.navLinks.show {
+    display: block;
+    /* Afficher les liens en tant que blocs lorsqu'ils sont visibles */
+}
+
+@media (max-width: 920px) {
+
+    .buttonsContainer{
+        margin: 0px;
+    }
+
+    .responsive {
+        display: block;
+    }
+
+    .menuButton {
+        display: block;
+
+        /* Afficher le bouton du menu lorsque la navigation est en mode responsive */
+    }
+
+    .navLinks {
+        display: none;
+        /* Masquer les liens de navigation par défaut sur les petits écrans */
+    }
+}
+

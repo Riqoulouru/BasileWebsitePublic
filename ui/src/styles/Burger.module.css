@@ -1,0 +1,77 @@
+.visible {
+    top: 0;
+}
+
+.invisible {
+    top: -100vh;
+}
+
+.burger {
+    top: 35px;
+    right: 35px;
+    color: var(--buttonColor);
+    position: fixed;
+    z-index: 1001;
+    animation: slideInFromRight .5s ease-in-out;
+}
+
+/* Style pour la boîte de navigation */
+.navBox {
+    position: fixed;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--backgroundColor);
+    transition: top .5s ease-in-out;
+    z-index: 1000; /* Met la boîte par-dessus les autres éléments sauf le burger*/
+    padding: 10% 0;
+    box-sizing: border-box;
+
+}
+.navBox a{
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    height: calc(100% / 4);
+    position: relative;
+    font-size: 2em;
+    background-color: rgba(0,0,0,.02);
+    overflow: hidden;
+    font-weight: 700;
+    font-family: MontSerrat, Tahoma, Arial, sans-serif;
+}
+
+.navBox a:hover {
+    box-shadow: inset 600px 0 0 var(--linkHoverColor);
+    color: var(--linkColor);
+}
+
+.navBox .selected {
+    color: var(--titleColor);
+}
+
+.navBox a span {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    height: 100%;
+    color: var(--textColor);
+    line-height: 50%;
+    font-size: 1em;
+    margin: auto;
+}
+
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}

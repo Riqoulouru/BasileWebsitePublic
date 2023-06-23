@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.square {
+  width: 300px;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-radius: 20px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.dropdownContainer {
+  margin-bottom: 20px;
+}
+
+.dropdown {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: #eeb489;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+}

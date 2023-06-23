@@ -1,0 +1,22 @@
+.background{
+    --backgroundColor: #F7C59F;
+    --titleColor: #794A2A;
+    --textColor: #8E6348;
+    --linkColor: #8E6348;
+    --linkHoverColor: #CFA07E;
+    --buttonColor: #794A2A;
+    --backgroundTitleCard : #EEB682;
+
+    --primaryColor: #F7C59F;
+    --secondaryColor: #eeb489;
+    --thirdColor: #eaaa77;
+    --textHoverColor: #ce5a5a;
+    --linkColor: rgba(185, 84, 84, 0.82);
+    --linkHoverColorMain: #dcacac;
+    --fontFamily: 'Times New Roman', Times, serif;
+
+
+    background-color: var(--backgroundColor);
+    overflow: hidden;
+    min-height: 100vh;
+}
